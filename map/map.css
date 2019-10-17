@@ -1,0 +1,9 @@
+#quests {
+    background-image: url("../assets/map.jpg");
+    width: 657px;
+    height: 800px
+}
+
+h2 {
+    color: red;
+}
