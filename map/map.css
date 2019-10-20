@@ -1,9 +1,25 @@
+
+
 #locations {
     background-image: url("../assets/map.jpg");
-    width: 1024px;
-    height: 829px
+    background-repeat: no-repeat;
+    width: 657px;
+    height: 800px;
+    background-size: contain;
+    margin: auto;
+    position: relative;
 }
 
 h2 {
     color: red;
+}
+
+.location {
+    position: absolute;
+    border: solid 2px black;
+    box-shadow: 5px 4px 10px black;
+    color: white;
+    padding: 2px;
+    background-color: black;
+    font-family: 'Special Elite'
 }
