@@ -7,14 +7,22 @@ loadProfile();
 
 const user = getUser();
 
-//need something for completed all quests
-
 const nav = document.getElementById('locations');
 
-let locationDisplay = createLocationLink(locations[0]);
-nav.appendChild(locationDisplay);
+completeLocationProcess(locations[0]);
 
+if (user.visited.welcome) {
+    completeLocationProcess(locations[1]);
+    completeLocationProcess(locations[2]);
+}
 
-console.log(nav)
-console.log(locationDisplay.title);
+if (user.visited.bigEds && user.visited.hospital) {
+    completeLocationProcess(locations[3]);
+}
 
+completeLocationProcess(locations[3]);
+console.log(user);
+
+function completeLocationProcess(locationArrayIndex) {
+    nav.appendChild(createLocationLink(locationArrayIndex));
+}
