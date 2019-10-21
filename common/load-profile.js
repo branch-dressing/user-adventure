@@ -10,7 +10,7 @@ export function loadProfile() {
         window.loaction = './';
     }
 
-    name.textContent = user.name;
+    name.textContent = 'Special Agent ' + user.name;
     agent.src = '../assets/' + user.agent + '.png';
     
 }
