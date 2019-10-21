@@ -6,7 +6,7 @@ export function loadProfile() {
 
     const user = getUser();
 
-    if(!user) {
+    if (!user) {
         window.loaction = './';
     }
 

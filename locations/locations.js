@@ -5,6 +5,11 @@ import checkLocations from '../locations/check-visited.js';
 import { getUser, saveUser } from '../data/api.js';
 
 loadProfile();
+const user = getUser();
+if (user.agent === 'cole') {
+    const all = document.getElementById('all');
+    all.style.textTransform = 'uppercase';
+}
 
 const searchParams = new URLSearchParams(window.location.search);
 const locationId = searchParams.get('id');
@@ -24,11 +29,9 @@ description.textContent = location.description;
 continueButton.addEventListener('click', function(event) {
     event.preventDefault();
 
-    const user = getUser();
     checkLocations(location.id, user);
     saveUser(user);
     loadProfile();
 
     window.location = '.';
-
-})
+});

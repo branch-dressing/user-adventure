@@ -7,6 +7,11 @@ loadProfile();
 
 const user = getUser();
 
+if (user.agent === 'cole') {
+    const all = document.getElementById('all');
+    all.style.textTransform = 'uppercase';
+}
+
 const nav = document.getElementById('locations');
 
 completeLocationProcess(locations[0]);
@@ -16,12 +21,32 @@ if (user.visited.welcome) {
     completeLocationProcess(locations[2]);
 }
 
-if (user.visited.bigEds && user.visited.hospital) {
+if (user.visited.hospital) {
     completeLocationProcess(locations[3]);
 }
 
-completeLocationProcess(locations[3]);
-console.log(user);
+if (user.visited.sheriffsDept) {
+    completeLocationProcess(locations[4]);
+    completeLocationProcess(locations[5]);
+    completeLocationProcess(locations[6]);
+}
+
+if (user.visited.bigEds) {
+    completeLocationProcess(locations[9]);
+}
+
+if (user.visited.easterPark && user.visited.sheriffsDept) {
+    completeLocationProcess(locations[7]);
+}
+
+if (user.visited.hayward) {
+    completeLocationProcess(locations[8]);
+}
+
+if (user.visited.cemetery) {
+    completeLocationProcess(locations[10]);
+    completeLocationProcess(locations[11]);
+}
 
 function completeLocationProcess(locationArrayIndex) {
     nav.appendChild(createLocationLink(locationArrayIndex));
