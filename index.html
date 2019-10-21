@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../common/common.css">
+    <title>Welcome to Twin Peaks</title>
+</head>
+
+<body>
+    <img src="./assets/banner.png">
+
+    <div id="hidden-banner">
+    <h1>Welcome to Twin Peaks</h1>
+    <h2>Population 51,201</h2>
+    </div>
+
+    <p>In the small town of Twin Peaks a girl named Laura Palmer has been murder. Another girl, Ronnette Pulaski, who has been tied to the case, crossed over from the Canadian Border making this a job for the FBI. Search the town for clues to see if you can discover who the killer is before they strike again!</p>
+
+    <form id="user-sign-in">
+        <p>
+            <label for="name">Special Agent:</label>
+            <input id="name" name="name" required>
+        </p>
+        <fieldset>
+            <ledgend>Pick your Agent</ledgend>
+            <p id="agent-selection">
+                <label id="cooper">
+                    <input type="radio" name="agent" required value="cooper">
+                    <img src="./assets/cooper.png">
+                </label>
+                <label id="cole">
+                    <input type="radio" name="agent" required value="cole">
+                    <img src="./assets/cole.png">
+                </label>
+                <label id="albert">
+                    <input type="radio" name="agent" required value="albert">
+                    <img src="./assets/albert.png">
+                </label>
+                <label id="bryson">
+                    <input type="radio" name="agent" required value="bryson">
+                    <img src="./assets/bryson.jpg">
+                </label>
+            </p>
+        </fieldset>
+        <button id="start">Start</button>
+    </form>
+
+    <script type="module" src="home/home.js"></script>
+</body>
+
+</html>
